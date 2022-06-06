@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Noto+Sans&display=swap");
+
+:root {
+  --primary-font: "Bubblegum Sans", cursive;
+  --core-black: #1a1a1d;
+  --playerX-color: #950740;
+  --playerY-color: #189507;
+  --button-color: #907163;
+  --soft-white: #ffffff;
+}
+
+body {
+  background-color: var(--core-black);
+  font-family: var(--primary-font);
+  text-align: center;
+}
+
+.title h1 {
+  font-size: 50px;
+  color: var(--soft-white);
+}
+
+.display {
+  font-size: 25px;
+}
+
+.display {
+  font-size: 25px;
+  color: var(--soft-white);
+}
+
+.playerX {
+  color: var(--playerX-color);
+}
+
+.playerO {
+  color: var(--playerY-color);
+}
+
+.container {
+  margin: 4rem auto;
+  max-width: 300px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+
+.box {
+  border: 1px solid var(--soft-white);
+  min-width: 100px;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  cursor: pointer;
+}
+
+.box:nth-child(-n + 3) {
+  border-top: none;
+}
+
+.box:nth-last-child(-n + 3) {
+  border-bottom: none;
+}
+
+.box:nth-child(3n) {
+  border-right: none;
+}
+
+.box:nth-child(3n + 1) {
+  border-left: none;
+}
+
+.announcer {
+  font-size: 25px;
+  color: var(--soft-white);
+  margin-bottom: 2rem;
+}
+
+.announcer.hide {
+  visibility: hidden;
+}
+
+button {
+  padding: 1rem 2rem;
+  background-color: var(--button-color);
+  font-size: large;
+  font-family: "Courier New", Courier, monospace;
+  border-radius: 1rem;
+  cursor: pointer;
+}
